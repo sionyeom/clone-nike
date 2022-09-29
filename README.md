@@ -15,16 +15,21 @@
 ## 디렉토리 구조
 
 ```bash
-├── data
-│   ├── train
-│   ├── test
-│   └── validation
-├── code
-│   ├── train.py
-│   ├── classify.py
-│   ├── model.py
-│   └── dataset.py
-└── run.sh
+├── node_modules
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   ├── assets
+│   ├── components
+│   ├── pages
+│   │   └── Main
+│   └── styles
+│       └── base
+├── .gitignore
+├── .package-lock.json
+├── .package.json
+└── README.md
 ``` 
 <br>
 
