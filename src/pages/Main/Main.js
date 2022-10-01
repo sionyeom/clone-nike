@@ -3,6 +3,9 @@ import { toJS } from "mobx";
 import { observer } from "mobx-react";
 import store from "../../store";
 import "./Main.scss";
+// header
+import Navigation from "../../components/Navigation/Navigation";
+
 const Main = observer(() => {
   // state
   const { arr, number } = store.countClass;
@@ -14,12 +17,7 @@ const Main = observer(() => {
     console.log(toJS(arr[0]));
   }, [arr]);
 
-  return (
-    <div>
-      <div className="ss">12</div>
-      <div className="kr">34</div>
-    </div>
-  );
+  return <Navigation />;
 });
 
 export default Main;
