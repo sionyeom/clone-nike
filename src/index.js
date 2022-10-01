@@ -4,13 +4,13 @@ import "./index.css";
 import "./styles/common.scss";
 import reportWebVitals from "./reportWebVitals";
 
-import { Main } from "./pages/Main/Main";
+import Main from "./pages/Main/Main";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <>
     <Main />
-  </React.StrictMode>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
