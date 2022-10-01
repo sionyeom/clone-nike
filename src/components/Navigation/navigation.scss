@@ -2,36 +2,4 @@ $desk_font-size: 12px;
 $desk_background-color: #f5f5f5;
 
 header {
-  .pre_header {
-    background-color: $desk_background-color;
-    height: 36px;
-    padding: 0 38px 0 36px;
-    // display: grid;
-
-    .logo {
-      display: inline-block;
-      vertical-align: middle;
-
-      a {
-        padding: 0 12px;
-        display: inline-block;
-
-        svg {
-          cursor: pointer;
-        }
-      }
-    }
-
-    .desk_user {
-      font-size: $desk_font-size;
-      display: inline-block;
-
-      a {
-        display: inline-block;
-        height: 100%;
-        line-height: 36px;
-        padding: 0 10px;
-      }
-    }
-  }
 }
