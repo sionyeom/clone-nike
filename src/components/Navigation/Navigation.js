@@ -4,10 +4,12 @@ import { ReactComponent as JordanLogo } from "../../assets/img/navigation/air-jo
 import { ReactComponent as ConverseLogo } from "../../assets/img/navigation/converse-logo.svg";
 
 import PreHeader from "./PreHeader/PreHeader";
+import Header from "./Header/Header";
 const Navigation = () => {
   return (
     <header>
       <PreHeader />
+      <Header />
     </header>
   );
 };
