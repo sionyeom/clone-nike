@@ -17,7 +17,12 @@ const Main = observer(() => {
     console.log(toJS(arr[0]));
   }, [arr]);
 
-  return <Navigation />;
+  return (
+    <>
+      <Navigation />
+      <div className="main"> </div>
+    </>
+  );
 });
 
 export default Main;
