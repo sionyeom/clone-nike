@@ -5,7 +5,7 @@ import store from "../../store";
 import "./Main.scss";
 // header
 import Navigation from "../../components/Navigation/Navigation";
-
+import SliderBanner from "../../components/SliderBanner/SliderBanner";
 const Main = observer(() => {
   // state
   const { arr, number } = store.countClass;
@@ -20,6 +20,7 @@ const Main = observer(() => {
   return (
     <>
       <Navigation />
+      <SliderBanner/>
       <div className="main"> </div>
     </>
   );
