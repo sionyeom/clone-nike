@@ -32,7 +32,7 @@ const Header = () => {
         />
       </div>
       <div className="btn_container">
-        <div className="icon">
+        <div className="icon left">
           <AiOutlineHeart />
         </div>
         <div className="icon">

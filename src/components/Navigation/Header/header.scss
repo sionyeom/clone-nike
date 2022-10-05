@@ -95,8 +95,8 @@
       align-items: center;
       z-index: 4;
       .icon {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         display: flex;
         line-height: 40px;
         text-align: center;
@@ -109,6 +109,10 @@
       .icon:hover {
         background: #e5e5e5;
         border-radius: 50%;
+      }
+
+      .icon.left {
+        margin-right: 12px;
       }
     }
   }
