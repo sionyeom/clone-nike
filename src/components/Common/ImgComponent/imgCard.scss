@@ -1,0 +1,41 @@
+.imgCard_wrapper {
+  width: 670px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  .imgCard_img {
+    position: absolute;
+    left: -100px;
+    z-index: 0;
+  }
+
+  .imgCard_text_container {
+    word-break: keep-all;
+    top: calc(66.66667% - 48px);
+    height: 33.33333%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    left: 48px;
+    width: 75%;
+    position: absolute;
+
+    .imgCard_title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .imgCard_btn_container {
+      display: flex;
+      margin-top: 24px;
+    }
+  }
+}
