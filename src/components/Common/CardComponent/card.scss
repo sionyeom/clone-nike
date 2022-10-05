@@ -1,0 +1,33 @@
+div {
+  .card_wrapper {
+    padding-left: 6px;
+    padding-right: 6px;
+
+    .card_title {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #111;
+      font-size: 48px;
+      line-height: 48px;
+      font-family: 'Noto Sans KR', sans-serif;
+      text-transform: uppercase;
+      margin-top: 48px;
+    }
+
+    .card_text {
+      margin-top: 24px;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card_btn_container {
+      margin-top: 24px;
+    }
+  }
+}
