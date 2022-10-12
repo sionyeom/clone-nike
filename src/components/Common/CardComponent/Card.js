@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./card.scss";
 import Button from "../MainBtn/Button";
-const Card = props => {
-  const { title, text, cardText } = props;
-  console.log(text);
-  let test = require("../../../assets/video/main_card2_gif.mp4");
+import { toJS } from "mobx";
+import { observer } from "mobx-react";
+import store from "../../../store";
+
+const CardComponent = props => {
+  const { title, text, cardText, subTitle, imgSrc } = props;
+
   return (
-    <div>
-      <div className="card_wrapper">
-        <div className="card_visual">
-          <video width="100%" height="100%" autoPlay>
-            <source src={test} type="video/mp4" />
-          </video>
-        </div>
+    <div className="card_wrapper">
+      <div className="card_visual">
+        <img style={{ width: "100%" }} src={imgSrc} />
+      </div>
+      <div className="card_text_container">
+        {subTitle &&
+          <h5 className="card_subtitle center">
+            {subTitle}
+          </h5>}
         <h4 className="card_title center">
           {title}
         </h4>
@@ -26,5 +31,27 @@ const Card = props => {
     </div>
   );
 };
+
+const Card = observer(() => {
+  const { arr } = store.cardComponentStore;
+  const [dataArr, setDataArr] = useState(toJS(arr));
+
+  return (
+    <div>
+      {dataArr.map(data => {
+        return (
+          <CardComponent
+            key={data}
+            title={data.title}
+            subTitle={data.subTitle}
+            text={data.text}
+            cardText={data.cardText}
+            imgSrc={data.imgSrc}
+          />
+        );
+      })}
+    </div>
+  );
+});
 
 export default Card;

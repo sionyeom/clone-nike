@@ -11,7 +11,13 @@ div {
       line-height: 48px;
       font-family: 'Noto Sans KR', sans-serif;
       text-transform: uppercase;
-      margin-top: 48px;
+    }
+
+    .card_subtitle {
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     .card_text {
@@ -28,6 +34,11 @@ div {
 
     .card_btn_container {
       margin-top: 24px;
+    }
+
+    .card_text_container {
+      margin-top: 48px;
+      margin-bottom: 84px;
     }
   }
 }
