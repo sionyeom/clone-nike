@@ -1,0 +1,46 @@
+.wrapper {
+  display: grid;
+  grid-template-areas: "left right_1" "left right_2";
+  //   row-gap: 10px;
+  /* row의 간격을 10px로 */
+  //   column-gap: 10px;
+  /* column의 간격을 20px로 */
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+.left {
+  grid-area: left;
+  height: 100%;
+  width: 100%;
+  .imgCard_wrapper {
+    height: 100%;
+    width: 100%;
+    .imgCard_img {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.right_1 {
+  grid-area: right_1;
+  .imgCard_wrapper {
+    .imgCard_img {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.right_2 {
+  grid-area: right_2;
+  .imgCard_wrapper {
+    .imgCard_img {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.scroll_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 84px;
+
+  .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    gap: 10px;
+    .item {
+      .imgCard_wrapper {
+        min-height: 500px;
+        .imgCard_img {
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
