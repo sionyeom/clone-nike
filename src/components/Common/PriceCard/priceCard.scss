@@ -2,7 +2,7 @@
   position: relative;
   min-width: 300px;
   min-height: 300px;
-  width: 30%;
+  // width: 30%;
   display: inline-block;
   margin-right: 12px;
 
@@ -27,11 +27,15 @@
         order: 1;
         color: #111;
         font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
       }
       p {
         color: #757575;
         font-size: 16px;
         line-height: 24px;
+        text-align: left;
       }
     }
 
@@ -39,6 +43,8 @@
       .priceCard_content_price_text {
         color: #111111;
         font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
       }
       .before {
         text-decoration: line-through;
