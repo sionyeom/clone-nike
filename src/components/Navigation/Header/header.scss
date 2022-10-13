@@ -9,6 +9,7 @@
     display: flex;
     position: relative;
     justify-content: flex-end;
+    z-index: 5;
 
     .logo_nike {
       display: inline-block;
@@ -56,13 +57,15 @@
       position: relative;
 
       .searchBar_icon_container {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
+        margin: 2px 0 2px 2px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
         border-radius: 50%;
+        cursor: pointer;
 
         .searchBar_icon {
           width: 24px;
@@ -116,114 +119,17 @@
       }
     }
   }
+
+  // 호버시 백그라운드
+  .navigation_hover_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.36);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: 3;
+    top: 94px;
+    transition: opacity .25s, visibility 0s linear .25s;
+  }
 }
-// .header {
-//   height: 60px;
-//   background-color: #fff;
-//   padding: 0 38px 0 36px;
-//   display: flex;
-//   position: relative;
-//   justify-content: flex-end;
-
-//   .logo_nike {
-//     display: inline-block;
-//     position: absolute;
-//     height: 60px;
-//     top: 0;
-//     left: 0;
-//     padding: 0 36px;
-//   }
-
-//   .menues_container {
-//     text-align: center;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     width: 100%;
-//     margin: 0 auto;
-//     z-index: 2;
-
-//     .menues {
-//       font-size: 16px;
-//       font-weight: 500;
-//       display: flex;
-//       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-//       justify-content: center;
-
-//       li {
-//         padding: 18px 12px 16px;
-//         border-bottom: 2px solid transparent;
-//         line-height: 1.5;
-//         transition: border-color 0.1s, color 0.1s;
-//       }
-
-//       li:hover {
-//         border-bottom: 2px solid black;
-//       }
-//     }
-//   }
-
-//   .searchBar_container {
-//     display: flex;
-//     z-index: 3;
-//     align-items: center;
-//     padding: 0 20px 0 16px;
-//     position: relative;
-
-//     .searchBar_icon_container {
-//       width: 40px;
-//       height: 40px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       position: absolute;
-//       border-radius: 50%;
-
-//       .searchBar_icon {
-//         width: 24px;
-//         height: 25px;
-//       }
-//     }
-//     .searchBar_icon_container:hover {
-//       background: #e5e5e5;
-//       border-radius: 50%;
-//     }
-
-//     .searchBar_searchInput {
-//       background-color: #f6f5f5;
-//       height: 40px;
-//       padding: 8px 48px;
-//       width: 180px;
-//       cursor: text;
-//       font-weight: 200;
-//       font-size: 16px;
-//       border-radius: 100px;
-//     }
-//     .searchBar_searchInput:hover {
-//       background: #e5e5e5;
-//     }
-//   }
-
-//   .btn_container {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     z-index: 4;
-//     .icon {
-//       width: 40px;
-//       height: 40px;
-//       display: flex;
-//       line-height: 40px;
-//       text-align: center;
-//       font-size: 28px;
-//       padding: 0 4px;
-//       border-radius: 50%;
-//       justify-content: center;
-//       align-items: center;
-//     }
-//     .icon:hover {
-//       background: #e5e5e5;
-//       border-radius: 50%;
-//     }
-//   }
-// }

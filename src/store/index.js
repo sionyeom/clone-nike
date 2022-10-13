@@ -1,5 +1,5 @@
 import countClass from "./countClass";
 import cardComponentStore from "./cardComponentClass";
-
-const store = { countClass, cardComponentStore };
+import navComponentStore from "./navComponentClass";
+const store = { countClass, cardComponentStore, navComponentStore };
 export default store;
