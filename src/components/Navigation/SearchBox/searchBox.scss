@@ -1,0 +1,15 @@
+.header_search_wrapper {
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  height: 312px;
+  background: #fff;
+  z-index: 6;
+  transition: all 0.1s;
+  padding: 0 16px;
+  .header_search_container {
+    max-width: 1920px;
+    margin: auto;
+    padding-top: 10px;
+  }
+}
