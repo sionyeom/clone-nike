@@ -4,22 +4,15 @@ import { ReactComponent as NikeSwooshLogo } from "../../../assets/img/navigation
 import { IoBagOutline } from "react-icons/io5";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
-
+import BackGround from "../BackGround/BackGround";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
-import PreHeader from "../PreHeader/PreHeader";
 import SearchBox from "../SearchBox/SearchBox";
-const BackGround = () => {
-  return (
-    <>
-      <div className="navigation_hover_background"></div>
-    </>
-  );
-};
+
 
 const Header = () => {
   const [isNavHover, setIsNavHover] = useState(0);
   const [isDropDownHover, setIsDropDownHover] = useState(0);
-
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(0);
   const [navListNum, setNavListNum] = useState(0);
 
   const mouseovernav = (n) => {
@@ -36,7 +29,6 @@ const Header = () => {
 
   return (
     <>
-      <PreHeader />
       <div className="header_pre_space">
         {/* 메뉴 옵션 */}
         {/* <div className="menues_container"> */}
@@ -101,7 +93,7 @@ const Header = () => {
           </div>
           <div className="searchBar_container">
             <div>
-              <div className="searchBar_icon_container">
+              <div className="searchBar_icon_container" onClick={() => {setIsSearchBarOpen(1)}}>
                 <FiSearch className="searchBar_icon" />
               </div>
               <input
@@ -110,6 +102,7 @@ const Header = () => {
                 id="name"
                 name="name"
                 placeholder="검색"
+                onClick={() => {setIsSearchBarOpen(1)}}
               />
             </div>
           </div>
@@ -122,9 +115,9 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <SearchBox />
+        {isSearchBarOpen === 1 && <SearchBox setIsSearchBarOpen={setIsSearchBarOpen} />}        
       </div>
-      {(isNavHover == 1 || isDropDownHover == 1) && <BackGround />}
+      {(isNavHover == 1 || isDropDownHover == 1) && <div className="navigation_hover_background"/>}
       {(isNavHover == 1 || isDropDownHover == 1) && (
         <DropDownMenu
           setIsDropDownHover={setIsDropDownHover}

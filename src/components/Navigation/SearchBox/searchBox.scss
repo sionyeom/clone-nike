@@ -1,3 +1,42 @@
+// 애니메이션
+@keyframes wrapperAnimation {
+  0% {
+    top: 60px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateX(0%);
+    right: 110px;
+  }
+  to {
+    right: 15%;
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes inputAnimation {
+  0% {
+    width: 180px;
+  }
+  to {
+    width: 656px;
+  }
+}
+
+@keyframes btnAnimation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .header_search_wrapper {
   width: 100%;
   display: inline-block;
@@ -7,9 +46,118 @@
   z-index: 6;
   transition: all 0.1s;
   padding: 0 16px;
+  animation: 0.6s wrapperAnimation forwards;
+
   .header_search_container {
     max-width: 1920px;
     margin: auto;
     padding-top: 10px;
+    .header_top_container {
+      display: flex;
+      justify-content: end;
+
+      .logo_nike {
+        display: inline-block;
+        position: absolute;
+        height: 60px;
+        top: 0;
+        left: 0;
+        padding: 0 36px;
+      }
+
+      .searchBar_container {
+        z-index: 3;
+        align-items: center;
+        padding: 0 20px 0 16px;
+        position: absolute;
+        right: 110px;
+        animation: 0.6s textAnimation forwards;
+
+        .searchBar_icon_container {
+          width: 36px;
+          height: 36px;
+          margin: 2px 0 2px 2px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          border-radius: 50%;
+          cursor: pointer;
+
+          .searchBar_icon {
+            width: 24px;
+            height: 25px;
+          }
+        }
+        .searchBar_icon_container:hover {
+          background: #e5e5e5;
+          border-radius: 50%;
+        }
+
+        .searchBar_searchInput {
+          background-color: #f6f5f5;
+          height: 40px;
+          padding: 8px 48px;
+          width: 180px;
+          cursor: text;
+          font-size: 16px;
+          border-radius: 100px;
+          font-weight: 500;
+          animation: 0.3s inputAnimation forwards;
+        }
+        .searchBar_searchInput::placeholder {
+          color: #d5d5d5;
+        }
+        .searchBar_searchInput:hover::placeholder {
+          color: #858585;
+        }
+        .searchBar_searchInput:hover {
+          background: #e5e5e5;
+        }
+      }
+      .btn_container {
+        width: 40px;
+        height: 40px;
+        background: #f5f5f5;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        right: 48px;
+        position: absolute;
+        cursor: pointer;
+        transform: scale(0);
+        animation: 0.2s btnAnimation forwards;
+        animation-delay: 0.5s;
+      }
+      .btn_container:hover {
+        background-color: #e5e5e5;
+      }
+    }
+
+    .header_bottom_container {
+      padding: 85px 72px;
+
+      .list_container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 656px;
+
+        .list_title {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 1.5;
+          padding-bottom: 16px;
+          color: #757575;
+        }
+        .list_content {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 1.2;
+          margin-bottom: 12px;
+        }
+      }
+    }
   }
 }

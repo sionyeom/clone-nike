@@ -6,7 +6,6 @@
     height: 60px;
     width: 100%;
     background-color: #fff;
-    position: relative;
   }
   .menues_container {
     text-align: center;
@@ -95,9 +94,15 @@
         padding: 8px 48px;
         width: 180px;
         cursor: text;
-        font-weight: 200;
         font-size: 16px;
         border-radius: 100px;
+        font-weight: 500;
+      }
+      .searchBar_searchInput::placeholder {
+        color: #d5d5d5;
+      }
+      .searchBar_searchInput:hover::placeholder {
+        color: #858585;
       }
       .searchBar_searchInput:hover {
         background: #e5e5e5;
@@ -141,7 +146,7 @@
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     z-index: 3;
-    top: 94px;
+    top: 96px;
     transition: opacity 0.25s, visibility 0s linear 0.25s;
   }
 }

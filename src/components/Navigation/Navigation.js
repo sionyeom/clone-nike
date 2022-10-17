@@ -6,7 +6,7 @@ import Header from "./Header/Header";
 const Navigation = () => {
   return (
     <header>
-      {/* <PreHeader /> */}
+      <PreHeader />
       <Header />
     </header>
   );
